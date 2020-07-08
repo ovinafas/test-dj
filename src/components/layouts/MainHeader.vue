@@ -1,24 +1,26 @@
 <template>
-  <div>
-        <!-- header -->
-       <h2>{{title}}</h2>
-  </div>
+    <header id="header"><!--header-->
+        <header-top></header-top>
+        <header-middle></header-middle>
+        <header-bottom></header-bottom>
+    </header>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
-
+import HeaderTop from "@/components/navigations/HeaderTop";
+import HeaderMiddle from "@/components/navigations/HeaderMiddle";
+import HeaderBottom from "@/components/navigations/HeaderBottom";
 export default {
-  name: "MainHeader",
-  components: {
-    // HelloWorld
-  },
-  data: function() {
-      return {
-          title: 'Main Header'
-      }
-      
-  }
+    name: `MainHeader`,
+    data() {
+        return {
+            title: 'Main Header'
+        }
+    },
+    components: {
+        HeaderTop,
+        HeaderMiddle,
+        HeaderBottom
+    }
 };
 </script>
